@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Candidate Result</h1>
+
+    <h2>Name: {{ name }}</h2>
+
+    <h3>Match Score: {{ score }}%</h3>
+
+    <h3>Detected Skills:</h3>
+
+    <ul>
+
+        {% for skill in skills %}
+
+        <li>{{ skill }}</li>
+
+        {% endfor %}
+
+    </ul>
+
+    <a href="/">Upload Another Resume</a>
+
+</div>
+
+</body>
+</html>
